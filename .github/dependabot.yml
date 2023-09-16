@@ -1,0 +1,29 @@
+version: 2
+updates:
+  # Dockerfile
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+      time: "04:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - spicelang/infra-team
+    assignees:
+      - spicelang/infra-team
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: .github/workflows/
+    schedule:
+      interval: daily
+      time: "04:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - spicelang/infra-team
+    assignees:
+      - spicelang/infra-team

@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  compiler-explorer:
+    image: chillibits/compiler-explorer:latest
+    container_name: compiler-explorer
+    restart: always
+    ports:
+      - 10240:10240
+    environment:
+      VIRTUAL_HOST: play.spicelang.com
+      LETSENCRYPT_HOST: play.spicelang.com
+      VIRTUAL_PORT: 10240
+    networks:
+      - nginx-proxy
+
+networks:
+  nginx-proxy:
+    name: nginx-proxy
+    external: true
