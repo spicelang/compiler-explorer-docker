@@ -26,8 +26,7 @@ RUN curl -fsSL https://server.chillibits.com/files/repo/gpg | tee /etc/apt/trust
 
 # Install Compiler Explorer
 RUN git clone --depth 1 https://github.com/spicelang/compiler-explorer.git /opt/compiler-explorer
-RUN cd /opt/compiler-explorer/etc/config && \
-    find . -type f ! -name "spice*" -exec rm {} \;
+RUN find /opt/compiler-explorer/etc/config -type f ! -name "spice.*" ! -name "sponsors.yaml" ! -name "site-templates.conf" ! -name "c++.*" ! -name "c.*" ! -name "assembly.*" ! -name "llvm.*" -exec rm {} +
 RUN cd /opt/compiler-explorer && npm install && make prebuild
 
 WORKDIR /opt/compiler-explorer
