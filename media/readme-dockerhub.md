@@ -1,10 +1,9 @@
 # Compiler Explorer for Spice
-
 ![GitHub release](https://img.shields.io/github/v/release/spicelang/compiler-explorer-docker)
 ![Docker Pulls](https://img.shields.io/docker/pulls/chillibits/compiler-explorer)
 [![CI](https://github.com/spicelang/compiler-explorer-docker/actions/workflows/publish-dev.yml/badge.svg)](https://github.com/spicelang/compiler-explorer-docker)
 
-This repository contains all resources to self-host compiler explorer with Spice support.
+*Note: This library is part of the **[Spice](https://github.com/spicelang)** project, but also can be used independently.*
 
 ## Usage
 To run the compiler explorer container, please use this command:
