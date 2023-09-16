@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -u # unset variables throw
 set -Eeuo pipefail # exit script if a command fails
 
