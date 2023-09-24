@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates software-properties-common apt-utils && \
     add-apt-repository -y ppa:ubuntu-toolchain-r/test && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata curl wget git build-essential binutils gcc-11 g++-11 && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata curl wget git build-essential binutils gcc-11 g++-11 python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
@@ -18,6 +18,10 @@ RUN wget https://apt.llvm.org/llvm.sh && \
     ./llvm.sh 17 && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y llvm && \
     rm -rf /var/lib/apt/lists/*
+
+# Install Osaca
+RUN pip install --user osaca
+ENV PATH="${PATH}:/root/.local/bin"
 
 # Install Spice
 RUN curl -fsSL https://server.chillibits.com/files/repo/gpg | tee /etc/apt/trusted.gpg.d/chillibits.asc && \
