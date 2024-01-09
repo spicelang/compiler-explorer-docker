@@ -1,6 +1,5 @@
 # Compiler Explorer for Spice
 
-![GitHub release](https://img.shields.io/github/v/release/spicelang/compiler-explorer-docker)
 ![Docker Pulls](https://img.shields.io/docker/pulls/chillibits/compiler-explorer)
 [![CI](https://github.com/spicelang/compiler-explorer-docker/actions/workflows/publish-dev.yml/badge.svg)](https://github.com/spicelang/compiler-explorer-docker)
 
@@ -13,4 +12,4 @@ To run the compiler explorer container, please use this command:
 docker run --rm -it chillibits/compiler-explorer
 ```
 
-© Marc Auberer 2023
+© Marc Auberer 2023-2024
